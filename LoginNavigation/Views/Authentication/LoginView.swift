@@ -65,9 +65,16 @@ struct LoginView: View {
                             .foregroundColor(.blue)
                             .frame(width: 360, height: 50)
                             .background(Color.white)
-                            .clipShape(Capsule())
                             .padding()
+                            .cornerRadius(10)
                     })
+                    
+                    
+                    // APPLE
+                    SignInWithAppleView()
+                        .frame(width: 360, height: 50)
+
+                    
                     
                     
                     NavigationLink(destination: RegistrationView().navigationBarBackButtonHidden(true)) {

@@ -110,6 +110,15 @@
         }
       },
       {
+        "package": "SPAlert",
+        "repositoryURL": "https://github.com/varabeis/SPAlert.git",
+        "state": {
+          "branch": null,
+          "revision": "0ad0b4bb00e1b7f13e7c08e85ebbee85f580e8c3",
+          "version": "3.0.4"
+        }
+      },
+      {
         "package": "SwiftProtobuf",
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {

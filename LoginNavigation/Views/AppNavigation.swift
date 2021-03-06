@@ -29,6 +29,8 @@ struct AppNavigation: View {
         }
         
     }
+    
+    // NOT WORKING
     func tabTitle(forIndex index : Int) -> String {
         switch index {
         case 0: return "Home"

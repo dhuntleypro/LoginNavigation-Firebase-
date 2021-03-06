@@ -33,6 +33,9 @@
 		86AF942C25F42DDA005862E3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 86AF942B25F42DDA005862E3 /* FirebaseStorage */; };
 		86AF942E25F42DDA005862E3 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 86AF942D25F42DDA005862E3 /* FirebaseFunctions */; };
 		86AF943025F42DDA005862E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 86AF942F25F42DDA005862E3 /* FirebaseAuth */; };
+		86AF943525F43572005862E3 /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 86AF943425F43572005862E3 /* SPAlert */; };
+		86AF943825F436C5005862E3 /* FBAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF943725F436C5005862E3 /* FBAuthError.swift */; };
+		86AF943B25F437A8005862E3 /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AF943A25F437A8005862E3 /* SignInWithAppleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,8 @@
 		86AF941825F42C61005862E3 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		86AF941B25F42C67005862E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		86AF941F25F42D64005862E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		86AF943725F436C5005862E3 /* FBAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAuthError.swift; sourceTree = "<group>"; };
+		86AF943A25F437A8005862E3 /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AF943525F43572005862E3 /* SPAlert in Frameworks */,
 				86AF942625F42DDA005862E3 /* FirebaseDatabase in Frameworks */,
 				86AF942E25F42DDA005862E3 /* FirebaseFunctions in Frameworks */,
 				86AF942825F42DDA005862E3 /* FirebaseFirestoreSwift-Beta in Frameworks */,
@@ -161,6 +167,7 @@
 			children = (
 				86AF93EB25F4294F005862E3 /* LoginView.swift */,
 				86AF93EF25F42960005862E3 /* RegistrationView.swift */,
+				86AF943A25F437A8005862E3 /* SignInWithAppleView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				86AF93F325F42979005862E3 /* AuthViewModel.swift */,
+				86AF943725F436C5005862E3 /* FBAuthError.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -208,6 +216,7 @@
 				86AF942B25F42DDA005862E3 /* FirebaseStorage */,
 				86AF942D25F42DDA005862E3 /* FirebaseFunctions */,
 				86AF942F25F42DDA005862E3 /* FirebaseAuth */,
+				86AF943425F43572005862E3 /* SPAlert */,
 			);
 			productName = LoginNavigation;
 			productReference = 86AF93C125F428AE005862E3 /* LoginNavigation.app */;
@@ -239,6 +248,7 @@
 			packageReferences = (
 				86AF940925F42BD2005862E3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				86AF942225F42DDA005862E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				86AF943325F43572005862E3 /* XCRemoteSwiftPackageReference "SPAlert" */,
 			);
 			productRefGroup = 86AF93C225F428AE005862E3 /* Products */;
 			projectDirPath = "";
@@ -267,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AF943825F436C5005862E3 /* FBAuthError.swift in Sources */,
 				86AF940725F42B81005862E3 /* AppNavigation.swift in Sources */,
 				86AF93F425F42979005862E3 /* AuthViewModel.swift in Sources */,
 				86AF941525F42C5D005862E3 /* HomeView.swift in Sources */,
@@ -282,6 +293,7 @@
 				86AF93EC25F4294F005862E3 /* LoginView.swift in Sources */,
 				86AF93D625F428C4005862E3 /* User.swift in Sources */,
 				86AF941025F42C3A005862E3 /* MainTabView.swift in Sources */,
+				86AF943B25F437A8005862E3 /* SignInWithAppleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +500,14 @@
 				minimumVersion = 7.7.0;
 			};
 		};
+		86AF943325F43572005862E3 /* XCRemoteSwiftPackageReference "SPAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/varabeis/SPAlert.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -530,6 +550,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 86AF942225F42DDA005862E3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		86AF943425F43572005862E3 /* SPAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86AF943325F43572005862E3 /* XCRemoteSwiftPackageReference "SPAlert" */;
+			productName = SPAlert;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
