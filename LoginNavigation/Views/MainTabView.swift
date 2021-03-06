@@ -15,19 +15,23 @@ struct MainTabView: View {
                 .onTapGesture {
                     selectedIndex = 0
                 }
+                .tag(0)
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
-                }.tag(0)
+                }
+            
+            
             
             SearchView()
                 .onTapGesture {
                     selectedIndex = 1
                 }
+                .tag(1)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
-                }.tag(1)
+                }
             
             
             
@@ -35,10 +39,11 @@ struct MainTabView: View {
                 .onTapGesture {
                     selectedIndex = 2
                 }
+                .tag(2)
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
-                }.tag(2)
+                }
             
         }
     }

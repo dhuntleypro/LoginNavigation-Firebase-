@@ -19,7 +19,7 @@ struct AppNavigation: View {
                     VStack {
                         MainTabView(selectedIndex : $selectedIndex)
                     }
-                    .navigationBarTitle(viewModel.tabTitle(forIndex: selectedIndex))
+                    .navigationBarTitle(tabTitle(forIndex: selectedIndex))
                     .navigationBarTitleDisplayMode(.inline)
                 }
             } else {
@@ -28,6 +28,14 @@ struct AppNavigation: View {
             }
         }
         
+    }
+    func tabTitle(forIndex index : Int) -> String {
+        switch index {
+        case 0: return "Home"
+        case 1: return "Search"
+        case 2: return "Messages"
+        default: return ""
+        }
     }
 }
 
